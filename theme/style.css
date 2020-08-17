@@ -1,0 +1,28 @@
+/*
+Theme Name: eko sample theme
+Theme URI: https://eko.com
+Author: eko
+Description: A test theme for plugin development
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+body {
+	text-align: left;
+}
+
+#ttr_sidebar {
+	border-left: 1px solid black;
+}
+
+#ttr_footer {
+	width: 100%;
+	border-top: 1px #a2a2a2 solid;
+	text-align: center;
+}
+
+.title {
+	font-family: verdana, Helvetica, Arial, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
