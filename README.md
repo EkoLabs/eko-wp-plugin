@@ -7,7 +7,7 @@ A Worpdress Plugin to embed and manage [eko](https://eko.com) interactive videos
 You can install the plugin into your Wordpress site in one of the following ways:
 
 1. Install directly from wordpress plugin repository:
-    - In wp dashboard, go to Admin > Add New
+    - In wp dashboard, go to Plugins > Add New
     - Search for "eko-video"
     - click on "install Now", wp will than install the plugin to your site
     - Once installed, click on "Activate"

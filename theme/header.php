@@ -57,7 +57,7 @@
 		}
 
 		.video__content .video__title {
-			font-family: sans-serif;
+			font-family: Stolzl-Bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
 			font-size: 48px;
 			line-height: 58px;
 			margin-bottom: 5px;

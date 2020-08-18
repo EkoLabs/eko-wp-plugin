@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
  * Plugin Name: eko-video
  * Author:      eko
  * Author URI:  https://eko.com
- * Description: A plugin to assist on embedding eko videoßs in WordPress sites.
+ * Description: A plugin to assist on embedding eko videos in WordPress sites.
  * Version:     1.0
  * License:     GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html

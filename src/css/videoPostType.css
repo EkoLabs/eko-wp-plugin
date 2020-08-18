@@ -230,6 +230,7 @@ a.ui-button:active,
 
 .watchTime {
 	margin-left: 5px;
+	font-family: Montserrat, sans-serif;
 }
 
 .video__info .clockIcon {
@@ -243,6 +244,7 @@ a.ui-button:active,
 
 .video__info .video__desc {
 	margin-top: 3px;
+	font-family: Stolzl-Bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1.3em;
 	line-height: 20px;
 }

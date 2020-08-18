@@ -24,7 +24,7 @@
 	"scripts": {
 		"prebuild": "composer install && npm install",
 		"watch": "webpack --mode=development --watch --config webpack-config.js",
-		"build": "webpack --config webpack-config.js"
+		"build": "webpack --mode=development --config webpack-config.js"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.10.5",

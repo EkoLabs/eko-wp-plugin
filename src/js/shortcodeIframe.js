@@ -7,11 +7,9 @@ function embedVideoFromShortcode(iframeParams) {
 	}
 	let ekoPlayer = new EkoPlayer( iframeParams.frame );
 	let extraParams = iframeParams.extraParams;
-	const params = Object.assign({
-		env: iframeParams.env
-	}, extraParams );
 	ekoPlayer.load( iframeParams.id, {
-		params,
+		env: iframeParams.env,
+		params: extraParams,
 		events: iframeParams.events || [ 'nodestart', 'nodeend', 'playing', 'pause' ],
 		pageParams: iframeParams.pageParams || [],
 		cover: iframeParams.cover
@@ -30,5 +28,8 @@ jQuery( document ).ready( function( $ ) {
 		let params = window[paramsName];
 		embedVideoFromShortcode(params);
 	});
-	embedVideoFromShortcode(iframeParams);
+	if(window.iframeParams)
+	{
+		embedVideoFromShortcode(window.iframeParams);
+	}
 });
