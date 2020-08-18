@@ -40,7 +40,7 @@ The plugin creates a new post type: `eko-video`, that holds all needed informati
 
 ### Advanced usage
 
-To modify the way you eko-video posts are being displayd, create custom templates in your theme.
+To modify the way you eko-video posts are being displayed, create custom templates in your theme.
 
 **Example:** Create _single-eko-video.php_ in your theme to change the way single eko-video pages are being displayed
 
@@ -53,7 +53,7 @@ There are two ways embed your eko interactive videos in any kind of post:
 
 ## eko-video shortcode
 
-Anywere in your post, type `[eko-video id=<video id>]`
+Anywhere in your post, type `[eko-video id=<video id>]`
 
 ### Basic parameters
 
@@ -61,10 +61,10 @@ Anywere in your post, type `[eko-video id=<video id>]`
 | :---------: | :-------: | :--------------------------------------------------------------------------------------------------------- |
 |     id      | `String`  | The id of the video to embed. **required**                                                                 |
 | responsive  | `Boolean` | Control whether or not the embedded video will be responsive. Default: **true**                            |
-|   height    | `String`  | css dimention for the embedded video height, if responsive will set the video's max-height                 |
-|    width    | `String`  | css dimention for the embedded video width, if responsive will set the video's max-width                   |
+|   height    | `String`  | css dimension for the embedded video height, if responsive will set the video's max-height                 |
+|    width    | `String`  | css dimension for the embedded video width, if responsive will set the video's max-width                   |
 |  password   | `String`  | To play password protected videos                                                                          |
-| full_screen | `Boolean` | to embed the video over the entire viewport. will not work if custom dimentions are set. Default: **true** |
+| full_screen | `Boolean` | to embed the video over the entire viewport. will not work if custom dimensions are set. Default: **true** |
 
 #### Example
 
@@ -78,7 +78,7 @@ Anywere in your post, type `[eko-video id=<video id>]`
 | :--------------: | :-------: | :---------------------------------------------------------------------------------- |
 |     autoplay     | `Boolean` | Default: **true**                                                                   |
 |   query_params   | `String`  | Comma separated list of query params to be forwarded to the player from the URL     |
-|     revision     | `Boolean` | To play revision version of the video. Default: **false**                           |
+|     revision     | `Boolean` | To play a revision version of the video. Default: **false**                           |
 |      debug       | `Boolean` | To present debug information on top of the video. Default: **false**                |
 | clearCheckpoint  | `Boolean` | Prevent the player from saving in-video progression. Default: **true**              |
 | hidePauseOverlay | `Boolean` | Prevent the player showing default overlay when video is paused. Default: **false** |
@@ -93,7 +93,7 @@ The plugin provides a set of methods for wp developers to access the data and em
 
 ### eko_is_video( \$post_id )
 
-Returns `true` if the post if of type eko-video. if \$post_id not provided, the default is the current post in the loop
+Returns `true` if the post is of type eko-video. if \$post_id not provided, the default is the current post in the loop
 
 #### eko_the_field( $field_name, $post_id )
 
@@ -129,7 +129,7 @@ Available fields:
 -   thumbnail (url of the video's thumbnail)
 -   canonical_url
 -   duration (estimated, in seconds)
--   kids_content (whether or not this video shloud comply to [COPPA regulations](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule))
+-   kids_content (whether or not this video should comply to [COPPA regulations](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule))
 -   orientation (represents the video's layout - vertical/horizontal)
 
 ### Embedding API
@@ -150,13 +150,13 @@ Embeds an eko video
 |      Param       |   Type    | Description                                                                                          |
 | :--------------: | :-------: | :--------------------------------------------------------------------------------------------------- |
 |    responsive    | `Boolean` | Control whether or not the embedded video will be responsive. Default: **true**                      |
-|      height      | `String`  | css dimention for the embedded video height, if responsive will set the video's max-height           |
-|      width       | `String`  | css dimention for the embedded video width, if responsive will set the video's max-width             |
+|      height      | `String`  | css dimension for the embedded video height, if responsive will set the video's max-height           |
+|      width       | `String`  | css dimension for the embedded video width, if responsive will set the video's max-width             |
 |     password     | `String`  | To play password protected videos                                                                    |
 |     autoplay     | `Boolean` | Default: **true**                                                                                    |
 |   query_params   |  `array`  | List of query params to be forwarded to the player from the URL                                      |
-|       env        | `String`  | Dev environment to play the video from, Default is empty. **It is not adviced to change that field** |
-|     revision     | `Boolean` | To play revision version of the video. Default: **false**                                            |
+|       env        | `String`  | Dev environment to play the video from, Default is empty. **It is not advised to change that field** |
+|     revision     | `Boolean` | To play a revision version of the video. Default: **false**                                            |
 |      debug       | `Boolean` | To present debug information on top of the video. Default: **false**                                 |
 | clearCheckpoint  | `Boolean` | Prevent the player from saving in-video progression. Default: **true**                               |
 | hidePauseOverlay | `Boolean` | Prevent the player showing default overlay when video is paused. Default: **false**                  |
@@ -182,5 +182,5 @@ Same as above method with the only exception of $videoId being derived from curr
 
 The plugin creates another menu page in the admin dashboard in which you can control the following:
 
-1. API env - the environment from which all of the videos will be plyed from. It is adviced to leave the API env input empty, unless you specifically need to test different environments.
+1. API env - the environment from which all of the videos will be played from. It is advised to leave the API env input empty, unless you specifically need to test different environments.
 2. Slug for eko Video post type - by default, the eko-video post type's slug is `eko-videos`. You are given the liberty to modify that.
