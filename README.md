@@ -14,6 +14,7 @@ You can install the plugin into your Wordpress site in one of the following ways
 2. From this repository:
     - Download zip of this code directly from GitHub
     - Copy the content of the folder into _<path_to_local_wp_installtion>/wp-content/plugins_
+    - In the plugin directory, run ```npm run build```
     - In your wp dashboard, go to Plugins > Installed Plugins, locate "eko-video" and click on "activate"
 
 ### Installing the sample theme
