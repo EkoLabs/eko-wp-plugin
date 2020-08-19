@@ -22,7 +22,7 @@
 		]
 	},
 	"scripts": {
-		"prebuild": "composer install && npm install",
+		"build:all": "composer install && npm install && npm run build",
 		"watch": "webpack --mode=development --watch --config webpack-config.js",
 		"build": "webpack --mode=production --config webpack-config.js"
 	},
