@@ -9,13 +9,6 @@
 	},
 	"prefer-stable": true,
 	"scripts": {
-		"install-codestandards": [
-			"Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
-		],
-		"post-install-cmd": [
-			"\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
-			"@install-codestandards"
-		],
-		"post-update-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility"
+
 	}
 }
