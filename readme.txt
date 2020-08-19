@@ -79,3 +79,11 @@ The template is a suggestion showing you how to utilize the plugin to gain max-c
 1. **Copy** the provided theme folder into your site's theme directory
 3. **Activate** the theme
 4. **Preview** any of your eko-Video posts
+
+== Changelog ==
+ 
+= 1.0.2 =
+* Improved readme
+* Extended embedding Features
+* Various bugs fixes
+ 
