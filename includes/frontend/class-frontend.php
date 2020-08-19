@@ -84,7 +84,7 @@ class Eko_Frontend {
 			'autoplay'         => $merged['autoplay'],
 			'clearcheckpoints' => $merged['clearCheckpoint'],
 			'hidePauseOverlay' => $merged['hidePauseOverlay'],
-			'studiorevision'   => $merged['revision'],
+			'revision'         => $merged['revision'],
 			'headnodeid'       => $merged['headnodeid'],
 		);
 		// create containing div

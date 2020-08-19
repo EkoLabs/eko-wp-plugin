@@ -64,7 +64,7 @@ function eko_embed_video_by_id( string $videoId, array $config = array(), string
 		'autoplay'         => $merged['autoplay'],
 		'clearcheckpoints' => $merged['clearCheckpoint'],
 		'hidePauseOverlay' => $merged['hidePauseOverlay'],
-		'studiorevision'   => $merged['revision'],
+		'revision'         => $merged['revision'],
 		'headnodeid'       => $merged['headnodeid'],
 	);
 	// send params to the embedding script
