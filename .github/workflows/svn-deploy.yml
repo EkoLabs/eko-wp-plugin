@@ -5,6 +5,8 @@ name: Build, Test, Tag, Deploy
 on:
   push:
     branches: [ master ]
+    tags:
+    - "*"
 
 jobs:
   build:
