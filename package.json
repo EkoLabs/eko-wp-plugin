@@ -1,6 +1,6 @@
 {
 	"name": "eko_wp_plugin",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"main": "index.js",
 	"author": "eko",
 	"babel": {

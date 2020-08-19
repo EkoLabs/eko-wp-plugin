@@ -82,7 +82,7 @@ The template is a suggestion showing you how to utilize the plugin to gain max-c
 
 == Changelog ==
  
-= 1.0.3 =
+= 1.0.4 =
 * Improved readme
 * Extended embedding Features
 * Various bugs fixes
