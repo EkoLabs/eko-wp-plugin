@@ -19,6 +19,7 @@ jobs:
         dev: no
     - name: Install npm packages and build
       run: |
+        npm install
         npm run build
     
   deploy-svn:
