@@ -21,15 +21,21 @@ jobs:
       run: |
         npm install
         npm run build
-  
-    - name: create git tag
-      uses: Klemensas/action-autotag@stable
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Wordpress plugin deploy
-      uses: 10up/action-wordpress-plugin-deploy@stable
-      with:
-        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-        SLUG: eko-video
+    
+  deploy-svn:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: create git tag
+        uses: Klemensas/action-autotag@stable
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Wordpress plugin deploy
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        with:
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SLUG: eko-video
