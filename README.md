@@ -87,7 +87,7 @@ Anywhere in your post, type `[eko-video id=<video id>]`
 
 ## API
 
-The plugin provides a set of methods for wp developers to access the data and embed eko-video type posts
+The plugin provides a set of methods for WP developers to access the data and embed eko-video type posts
 
 ### Methods
 
@@ -183,4 +183,4 @@ Same as above method with the only exception of $videoId being derived from curr
 The plugin creates another menu page in the admin dashboard in which you can control the following:
 
 1. API env - the environment from which all of the videos will be played from. It is advised to leave the API env input empty, unless you specifically need to test different environments.
-2. Slug for eko Video post type - by default, the eko-video post type's slug is `eko-videos`. You are given the liberty to modify that.
+2. Slug for eko Video post type - by default, the eko-video post type's slug is `eko-videos`. You are given the ability to modify that here.

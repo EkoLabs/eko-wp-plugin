@@ -82,9 +82,9 @@ class Eko_Frontend {
 			'password'         => $merged['password'],
 			'debug'            => $merged['debug'],
 			'autoplay'         => $merged['autoplay'],
-			'clearCheckpoint'  => $merged['clearCheckpoint'],
+			'clearcheckpoints' => $merged['clearCheckpoint'],
 			'hidePauseOverlay' => $merged['hidePauseOverlay'],
-			'revision'         => $merged['revision'],
+			'studiorevision'   => $merged['revision'],
 			'headnodeid'       => $merged['headnodeid'],
 		);
 		// create containing div
