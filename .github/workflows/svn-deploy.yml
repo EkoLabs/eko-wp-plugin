@@ -33,8 +33,14 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
+      - name: test secrets
+        env: 
+          user: ${{ secrets.SVN_USERNAME }}
+          pass: ${{ secrets.SVN_PASSWORD }}
+        run:
+          echo "got params $user $pass"
       - name: Wordpress plugin deploy
-        uses: nk-o/action-wordpress-plugin-deploy@master
+        uses: 10up/action-wordpress-plugin-deploy@stable
         with:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
