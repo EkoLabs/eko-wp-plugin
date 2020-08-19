@@ -31,9 +31,13 @@ jobs:
       - uses: actions/checkout@v2
         
       - name: create git tag
+        id: tagging
         uses: Klemensas/action-autotag@stable
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - run: |
+          echo "tag created ${{ steps.tagging.outputs.tagname }}"
       
       - name: Wordpress plugin deploy
         uses: 10up/action-wordpress-plugin-deploy@stable
