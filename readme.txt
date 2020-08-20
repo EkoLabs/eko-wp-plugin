@@ -20,7 +20,7 @@ Use the eko Wordpress Plugin to take full control of your eko interactive conten
 
 **Show your videos anywhere** Using shortcodes to embed your eko episode in any post type.
 
-Full How-To use can be found in our (GitHub repository)[https://github.com/EkoLabs/eko-wp-plugin]
+Full How-To use can be found in our [GitHub repository](https://github.com/EkoLabs/eko-wp-plugin)
 
 == Features ==
 * Simple & Intuitive
@@ -83,7 +83,10 @@ The template is a suggestion showing you how to utilize the plugin to gain max-c
 4. **Preview** any of your eko-Video posts
 
 == Changelog ==
- 
+
+= 1.0.7 =
+* typos in readme...
+  
 = 1.0.6 =
 * Bugs fixes
  
