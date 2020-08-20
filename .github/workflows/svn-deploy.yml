@@ -4,12 +4,12 @@ name: Build, Test, Tag, Deploy
 
 on:
   push:
-    branches: [ master ]
     tags:
     - "*"
 
 jobs:
   build:
+    if: github.event.base_ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     
     steps:
@@ -23,15 +23,6 @@ jobs:
       run: |
         npm install
         npm run build
-
-    - name: create git tag
-      id: tagging
-      uses: Klemensas/action-autotag@stable
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
-    - run: |
-        echo "tag created ${{ steps.tagging.outputs.tagname }}"
     
     - name: Wordpress plugin deploy
       uses: 10up/action-wordpress-plugin-deploy@stable
@@ -39,7 +30,6 @@ jobs:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
         SLUG: eko-video
-        VERSION: ${{ steps.tagging.outputs.tagname }}
 
     - name: WordPress.org plugin asset/readme update
       uses: 10up/action-wordpress-plugin-asset-update@stable

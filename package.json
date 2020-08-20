@@ -24,7 +24,8 @@
 	"scripts": {
 		"build:all": "composer install && npm install && npm run build",
 		"watch": "webpack --mode=development --watch --config webpack-config.js",
-		"build": "webpack --mode=production --config webpack-config.js"
+        "build": "webpack --mode=production --config webpack-config.js",
+        "release": "node ./updateVersion.js"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.10.5",
@@ -45,6 +46,8 @@
 		"webpack-cli": "^3.3.12"
 	},
 	"dependencies": {
-		"eko-js-sdk": "0.0.2"
+		"cross-spawn": "^7.0.3",
+		"eko-js-sdk": "0.0.2",
+		"minimist": "^1.2.5"
 	}
 }
