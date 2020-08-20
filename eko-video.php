@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
  * Author:      eko
  * Author URI:  https://eko.com
  * Description: A plugin to assist on embedding eko videos in WordPress sites.
- * Version:     1.0.6
+ * Version:     1.0.7
  * License:     GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
