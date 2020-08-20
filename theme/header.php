@@ -88,12 +88,16 @@
 			font-size: 14px;
 			margin-left: 5px;
 		}
+		.watchTime {
+			font-family: Montserrat, sans-serif;
+		}
 
 		.video__content .video__desc {
 			margin-top: 30px;
 			font-size: 18px;
 			line-height: 24px;
 			position: relative;
+			font-family: Montserrat, sans-serif;
 		}
 
 	</style>
