@@ -45,11 +45,11 @@ class Eko_Frontend {
 				'responsive'       => 'true',
 				'query_params'     => '',
 				'full_screen'      => 'false',
-				'revision'         => false,
+				'revision'         => '',
 				'debug'            => false,
 				'autoplay'         => true,
-				'clearCheckpoint'  => true,
-				'hidePauseOverlay' => false,
+				'clearcheckpoint'  => false,
+				'hidepauseoverlay' => false,
 				'cover'            => '',
 				'headnodeid'       => '',
 
@@ -82,11 +82,13 @@ class Eko_Frontend {
 			'password'         => $merged['password'],
 			'debug'            => $merged['debug'],
 			'autoplay'         => $merged['autoplay'],
-			'clearcheckpoints' => $merged['clearCheckpoint'],
-			'hidePauseOverlay' => $merged['hidePauseOverlay'],
-			'revision'         => $merged['revision'],
+			'clearcheckpoints' => $merged['clearcheckpoint'],
+			'hidePauseOverlay' => $merged['hidepauseoverlay'],
 			'headnodeid'       => $merged['headnodeid'],
 		);
+		if ($merged['revision']) {
+			$extra_params['studiorevision'] = $merged['revision'];
+		}
 		// create containing div
 		$container_id = 'container-' . $merged['id'];
 		// enqueue the script

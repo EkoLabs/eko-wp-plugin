@@ -7,15 +7,15 @@ A Worpdress Plugin to embed and manage [eko](https://eko.com) interactive videos
 You can install the plugin into your Wordpress site in one of the following ways:
 
 1. Install directly from wordpress plugin repository:
-    - In wp dashboard, go to Plugins > Add New
-    - Search for "eko-video"
-    - click on "install Now", wp will than install the plugin to your site
-    - Once installed, click on "Activate"
+   - In wp dashboard, go to Plugins > Add New
+   - Search for "eko-video"
+   - click on "install Now", wp will than install the plugin to your site
+   - Once installed, click on "Activate"
 2. From this repository:
-    - Download zip of this code directly from GitHub
-    - Copy the content of the folder into _<path_to_local_wp_installtion>/wp-content/plugins_
-    - In the plugin directory, run ```npm run build```
-    - In your wp dashboard, go to Plugins > Installed Plugins, locate "eko-video" and click on "activate"
+   - Download zip of this code directly from GitHub
+   - Copy the content of the folder into _<path_to_local_wp_installtion>/wp-content/plugins_
+   - In the plugin directory, run `npm run build`
+   - In your wp dashboard, go to Plugins > Installed Plugins, locate "eko-video" and click on "activate"
 
 ### Installing the sample theme
 
@@ -74,16 +74,16 @@ Anywhere in your post, type `[eko-video id=<video id>]`
 
 ### Advanced parameters
 
-|      Param       |   Type    | Description                                                                         |
-| :--------------: | :-------: | :---------------------------------------------------------------------------------- |
-|     autoplay     | `Boolean` | Default: **true**                                                                   |
-|   query_params   | `String`  | Comma separated list of query params to be forwarded to the player from the URL     |
-|     revision     | `Boolean` | To play a revision version of the video. Default: **false**                           |
-|      debug       | `Boolean` | To present debug information on top of the video. Default: **false**                |
-| clearCheckpoint  | `Boolean` | Prevent the player from saving in-video progression. Default: **true**              |
-| hidePauseOverlay | `Boolean` | Prevent the player showing default overlay when video is paused. Default: **false** |
-|    headnodeid    | `String`  | Customize the video's headnode                                                      |
-|      cover       | `String`  | css identifier to override eko's custom cover when the video is being loaded        |
+|      Param       |        Type        | Description                                                                         |
+| :--------------: | :----------------: | :---------------------------------------------------------------------------------- |
+|     autoplay     |     `Boolean`      | Default: **true**                                                                   |
+|   query_params   |      `String`      | Comma separated list of query params to be forwarded to the player from the URL     |
+|     revision     | `String`, `number` | To play a revision version of the video. Can be a revision number or 'latest'       |
+|      debug       |     `Boolean`      | To present debug information on top of the video. Default: **false**                |
+| clearCheckpoint  |     `Boolean`      | Prevent the player from saving in-video progression. Default: **true**              |
+| hidePauseOverlay |     `Boolean`      | Prevent the player showing default overlay when video is paused. Default: **false** |
+|    headnodeid    |      `String`      | Customize the video's headnode                                                      |
+|      cover       |      `String`      | css identifier to override eko's custom cover when the video is being loaded        |
 
 ## API
 
@@ -123,14 +123,14 @@ Same as above, returns array(keys/values) of all of the posts fields
 
 Available fields:
 
--   video_id
--   password
--   title
--   thumbnail (url of the video's thumbnail)
--   canonical_url
--   duration (estimated, in seconds)
--   kids_content (whether or not this video should comply to [COPPA regulations](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule))
--   orientation (represents the video's layout - vertical/horizontal)
+- video_id
+- password
+- title
+- thumbnail (url of the video's thumbnail)
+- canonical_url
+- duration (estimated, in seconds)
+- kids_content (whether or not this video should comply to [COPPA regulations](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule))
+- orientation (represents the video's layout - vertical/horizontal)
 
 ### Embedding API
 
@@ -138,45 +138,45 @@ Available fields:
 
 Embeds an eko video
 
-|     Param     |   Type   | Description                                                                                                               |
-| :-----------: | :------: | :------------------------------------------------------------------------------------------------------------------------ |
-|   \$videoId   | `String` | Id for the embedded video. **required**                                                                                   |
-|   \$config    | `array`  | Configure the way the video is displayed. **optional** \*                                                                    |
-| \$containerId | `String` | Id for container div for the embed iframe. **optional**, by default will create a new div with id _container-\<videoId\>_ |
-|   \$events    | `array`  | List of events to be forwarded to the player . **optional**, defaults are ['nodestart', 'nodeend', 'playing', 'pause']\*\*  |
+|     Param     |   Type   | Description                                                                                                                |
+| :-----------: | :------: | :------------------------------------------------------------------------------------------------------------------------- |
+|   \$videoId   | `String` | Id for the embedded video. **required**                                                                                    |
+|   \$config    | `array`  | Configure the way the video is displayed. **optional** \*                                                                  |
+| \$containerId | `String` | Id for container div for the embed iframe. **optional**, by default will create a new div with id _container-\<videoId\>_  |
+|   \$events    | `array`  | List of events to be forwarded to the player . **optional**, defaults are ['nodestart', 'nodeend', 'playing', 'pause']\*\* |
 
 ##### \* List of all available parameters for the \$config array:
 
-|      Param       |   Type    | Description                                                                                          |
-| :--------------: | :-------: | :--------------------------------------------------------------------------------------------------- |
-|    responsive    | `Boolean` | Control whether or not the embedded video will be responsive. Default: **true**                      |
-|      height      | `String`  | css dimension for the embedded video height, if responsive will set the video's max-height           |
-|      width       | `String`  | css dimension for the embedded video width, if responsive will set the video's max-width             |
-|     password     | `String`  | To play password protected videos                                                                    |
-|     autoplay     | `Boolean` | Default: **true**                                                                                    |
-|   query_params   |  `array`  | List of query params to be forwarded to the player from the URL                                      |
-|       env        | `String`  | Dev environment to play the video from, Default is empty. **It is not advised to change that field** |
-|     revision     | `Boolean` | To play a revision version of the video. Default: **false**                                            |
-|      debug       | `Boolean` | To present debug information on top of the video. Default: **false**                                 |
-| clearCheckpoint  | `Boolean` | Prevent the player from saving in-video progression. Default: **true**                               |
-| hidePauseOverlay | `Boolean` | Prevent the player showing default overlay when video is paused. Default: **false**                  |
-|    headnodeid    | `String`  | Customize the video's headnode                                                                       |
-|      cover       | `String`  | css identifier to override eko's custom cover when the video is being loaded                         |
+|      Param       |        Type        | Description                                                                                          |
+| :--------------: | :----------------: | :--------------------------------------------------------------------------------------------------- |
+|    responsive    |     `Boolean`      | Control whether or not the embedded video will be responsive. Default: **true**                      |
+|      height      |      `String`      | css dimension for the embedded video height, if responsive will set the video's max-height           |
+|      width       |      `String`      | css dimension for the embedded video width, if responsive will set the video's max-width             |
+|     password     |      `String`      | To play password protected videos                                                                    |
+|     autoplay     |     `Boolean`      | Default: **true**                                                                                    |
+|   query_params   |      `array`       | List of query params to be forwarded to the player from the URL                                      |
+|       env        |      `String`      | Dev environment to play the video from, Default is empty. **It is not advised to change that field** |
+|     revision     | `String`, `number` | To play a revision version of the video. Can be a revision number or 'latest'                        |
+|      debug       |     `Boolean`      | To present debug information on top of the video. Default: **false**                                 |
+| clearCheckpoint  |     `Boolean`      | Prevent the player from saving in-video progression. Default: **true**                               |
+| hidePauseOverlay |     `Boolean`      | Prevent the player showing default overlay when video is paused. Default: **false**                  |
+|    headnodeid    |      `String`      | Customize the video's headnode                                                                       |
+|      cover       |      `String`      | css identifier to override eko's custom cover when the video is being loaded                         |
 
 ##### \*\* more explanation about events can be found in [eko developer site](https://developer.eko.com/docs/embedding/dev.html#Core-Events)
 
-#### eko_embed_current_video( $config, $containerId, $events )
+#### eko_embed_current_video( $config, $containerId, \$events )
 
-Same as above method with the only exception of $videoId being derived from current post in the loop.
+Same as above method with the only exception of \$videoId being derived from current post in the loop.
 
 #### eko_embed_fixed_size( $videoId, $height, $width, $config, $containerId, $events )
 
 Same as `eko_embed_video_by_id`.
 `$height` and `$width` are explicitly being changed. Embedded video is not responsive by default.
 
-#### eko_embed_current_fixed_size( $height, $width, $config, $containerId, $events )
+#### eko_embed_current_fixed_size( $height, $width, $config, $containerId, \$events )
 
-Same as above method with the only exception of $videoId being derived from current post in the loop.
+Same as above method with the only exception of \$videoId being derived from current post in the loop.
 
 ## eko Options
 

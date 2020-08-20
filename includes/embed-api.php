@@ -29,10 +29,10 @@ function eko_embed_video_by_id( string $videoId, array $config = array(), string
 			'env'              => '', // default environment is empty
 			'debug'            => false,
 			'autoplay'         => true,
-			'clearCheckpoint'  => true,
+			'clearCheckpoint'  => false,
 			'hidePauseOverlay' => false,
 			'cover'            => '',
-			'revision'         => false,
+			'revision'         => '',
 			'headnodeid'       => '',
 
 		),
@@ -64,9 +64,11 @@ function eko_embed_video_by_id( string $videoId, array $config = array(), string
 		'autoplay'         => $merged['autoplay'],
 		'clearcheckpoints' => $merged['clearCheckpoint'],
 		'hidePauseOverlay' => $merged['hidePauseOverlay'],
-		'revision'         => $merged['revision'],
 		'headnodeid'       => $merged['headnodeid'],
 	);
+	if ($merged['revision']) {
+		$extra_params['studiorevision'] = $merged['revision'];
+	}
 	// send params to the embedding script
 	$iframe_params = array(
 		'env'         => $merged['env'],
