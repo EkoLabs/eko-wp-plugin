@@ -29,9 +29,7 @@ jobs:
       run: |
         npm install
         npm run build
-        
-    - name: Install Composer dependencies
-      run: composer install -o --no-progress
+
     - name: Setup PHP
       uses: shivammathur/setup-php@v1
       with:
