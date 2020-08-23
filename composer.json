@@ -2,6 +2,7 @@
 	"name": "eko/wordpress-plugin",
 	"description": "a plugin by eko to embed eko videos in wordpress sites",
 	"require-dev": {
+        "phpunit/phpunit": "7.5.9",
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
 		"wp-coding-standards/wpcs": "^0.14.1",
 		"roave/security-advisories": "dev-master"
