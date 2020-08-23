@@ -1,5 +1,5 @@
 === eko Wordpress Plugin ===
-Contributors: deanshmuel
+Contributors: ekovideo, deanshmuel
 Tags: eko, embed, embedding, interactive, video, videos, episode, episodes
 Requires at least: 4.5
 Tested up to: 5.4.2

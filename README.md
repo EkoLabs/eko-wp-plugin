@@ -1,46 +1,46 @@
 # eko-wp-plugin
 
-A Worpdress Plugin to embed and manage [eko](https://eko.com) interactive videos seamlessly into your Wordpress site.
+A Worpdress plugin to embed and manage [eko](https://eko.com) interactive videos seamlessly into your Wordpress site.
 
 ## Installation
 
 You can install the plugin into your Wordpress site in one of the following ways:
 
 1. Install directly from wordpress plugin repository:
-   - In wp dashboard, go to Plugins > Add New
+   - In WP dashboard, go to Plugins > Add New
    - Search for "eko-video"
-   - click on "install Now", wp will than install the plugin to your site
+   - Click on "Install Now", WP will then install the plugin to your site
    - Once installed, click on "Activate"
 2. From this repository:
    - Download zip of this code directly from GitHub
    - Copy the content of the folder into _<path_to_local_wp_installtion>/wp-content/plugins_
    - In the plugin directory, run `npm run build`
-   - In your wp dashboard, go to Plugins > Installed Plugins, locate "eko-video" and click on "activate"
+   - In your WP dashboard, go to Plugins > Installed Plugins, locate "eko-video" and click on "activate"
 
 ### Installing the sample theme
 
 The plugin is provided with a sample wp-theme to direct you into embedding eko videos, to use it:
 
 1. Copy the theme folder inside the plugin's files into _<path_to_local_wp_installtion>/wp-content/themes_
-2. In your wp dashboard, go to Appearance > Themes, locate "eko sample theme" and click on "activate"
+2. In your WP dashboard, go to Appearance > Themes, locate "eko sample theme" and click on "activate"
 
 # Usage
 
-The plugin presents several methods for you to control and embed your interactive videos. It utilizes the powers of the [eko-js-sdk](https://www.npmjs.com/package/eko-js-sdk). We recommend reading and understanding it's usage first.
+The plugin presents several methods for you to control and embed your interactive videos. It utilizes the [eko-js-sdk](https://www.npmjs.com/package/eko-js-sdk). We recommend reading and understanding its usage first.
 
 ## Create eko-Video post
 
 The plugin creates a new post type: `eko-video`, that holds all needed information for embedding your eko content.
 
 1. Go to eko-Videos > Add New eko Video
-2. Enter the id of your eko video, the information will be fetched automatically from our servers
+2. Enter the ID of your eko video, the information will be fetched automatically from our servers
 3. For password protected videos, enter the password into the right input and update
 4. You can preview the content and view the video's metadata directly from the edit page
 5. You can view the new post itself, the template is loaded from the provided sample theme
 
 ### Advanced usage
 
-To modify the way you eko-video posts are being displayed, create custom templates in your theme.
+To modify the way your eko-video posts are being displayed, create custom templates in your theme.
 
 **Example:** Create _single-eko-video.php_ in your theme to change the way single eko-video pages are being displayed
 
@@ -48,7 +48,7 @@ To modify the way you eko-video posts are being displayed, create custom templat
 
 There are two ways embed your eko interactive videos in any kind of post:
 
-1. Add a new block > Embed, enter your video's URL. Wp will automatically embed the video.
+1. Add a new block > Embed, enter your video's URL. WP will automatically embed the video.
 2. Use `eko-video` shortcode
 
 ## eko-video shortcode

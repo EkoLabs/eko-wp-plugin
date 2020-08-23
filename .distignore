@@ -32,3 +32,4 @@ yarn.lock
 *.sql
 *.tar.gz
 *.zip
+updateVersion.js
