@@ -5,9 +5,12 @@
  */
 class EkoShortcodesTest extends WP_UnitTestCase {
 
+	var $frontend;
 
 	public function setUp() {
 		parent::setUp();
+		require_once 'includes/frontend/class-frontend.php';
+		$this->frontend = new Eko_Frontend();
 	}
 
 	public function tearDown() {
@@ -28,22 +31,19 @@ class EkoShortcodesTest extends WP_UnitTestCase {
 		// $sos_data = json_decode( $data, true );
 		// var_dump($sos_data);
 		global $shortcode_tags;
-		var_dump( $shortcode_tags );
 		// test existance of shortcodes
-		$this->assertArrayHasKey( 'eko-video', $shortcode_tags );
-		$this->assertArrayHasKey( 'eko-responsive-video', $shortcode_tags );
-		$this->assertArrayHasKey( 'eko-simple-video', $shortcode_tags );
+		$this->assertArrayHasKey( $this->frontend->shortcode, $shortcode_tags );
+
 		//test shortcodes value
-		$this->assertSame( 'video_shortcode', $shortcode_tags['eko-video'] );
-		$this->assertSame( 'eko_responsive_video_shortcode', $shortcode_tags['eko-responsive-video'] );
-		$this->assertSame( 'eko_simple_video_shortcode', $shortcode_tags['eko-simple-video'] );
+		$this->assertSame( 'video_shortcode', $shortcode_tags['eko-video'][1] );
+
 		// test basic shortcode method
-		$shortcode_res = eko_video_shortcode( array( 'id' => 'MebL1z' ) );
+		$sample_id = 'MebL1z';
+		$shortcode_res = $this->frontend->video_shortcode( array( 'id' => $sample_id ) );
 		$xml           = simplexml_load_string( $shortcode_res );
 		$div_class     = $xml['class'];
-		$iframe        = $xml->iframe;
-		$this->assertSame( (string) $div_class, 'eko-iframe-container horizontal' );
-		$this->assertTrue( (bool) $iframe['allowfullscreen'] );
-		$this->assertSame( 'https://eko.com/v/MebL1z/embed', (string) $iframe['src'] );
+		$div_id     = $xml['id'];
+		$this->assertSame( (string) $div_class, 'sdk-container' );
+		$this->assertSame( (string) $div_id, 'container-'.$sample_id );
 	}
 }

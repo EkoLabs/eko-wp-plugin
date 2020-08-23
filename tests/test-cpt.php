@@ -5,9 +5,13 @@
  */
 class EkoCustomPostTypeTest extends WP_UnitTestCase {
 
+	var $video;
 
 	public function setUp() {
 		parent::setUp();
+		require_once 'includes/admin/class-video.php';
+		$this->video = new Eko_Video();
+		$this->video->setup();
 	}
 
 	public function tearDown() {
@@ -27,10 +31,14 @@ class EkoCustomPostTypeTest extends WP_UnitTestCase {
 		// call the action that init the cpt
 		do_action( 'init' );
 		$this->assertarrayHasKey( 'eko-video', $wp_post_types );
-		$video = $wp_post_types['eko-video'];
-		$this->assertTrue( $video->public );
-		$this->assertTrue( $video->has_archive );
-		$this->assertSame( $video->rewrite['slug'], 'eko-videos' );
+		$video_type = $wp_post_types['eko-video'];
+		$this->assertTrue( $video_type->public );
+		$this->assertTrue( $video_type->has_archive );
+		$this->assertSame( $video_type->rewrite['slug'], 'eko-videos' );
 
+		// the the object itself
+		$this->assertSame( 'eko-video', $this->video->post_type );
+		$this->assertSame( 'eko Videos', $this->video->name );
+		$this->assertSame( 'eko Video', $this->video->singular_name );
 	}
 }

@@ -18,6 +18,8 @@ class EkoConstantTest extends WP_UnitTestCase {
 	 * Test add_user_meta for new user with author role
 	 */
 	function test_eko_constants() {
+		$this->assertSame( 'eko-video', EKO_NAME );
+		$this->assertSame( 'eko-videos', EKO_DFAULT_CPT_SLUG );
 		$this->assertSame( plugins_url( '', __FILE__ ), EKO_PLUGIN_URL . '/tests' );
 		$this->assertSame( plugin_dir_path( __FILE__ ), EKO_PLUGIN_PATH . 'tests/' );
 	}

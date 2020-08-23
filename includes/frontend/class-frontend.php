@@ -5,8 +5,6 @@ defined( 'ABSPATH' ) or die( 'Access denied !' );
 class Eko_Frontend {
 
 
-
-	var $helper;
 	var $shortcode = 'eko-video';
 
 	/**
