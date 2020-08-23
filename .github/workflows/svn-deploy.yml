@@ -4,10 +4,12 @@ name: Build, Test, Tag, Deploy
 
 on:
   push:
-    branches: master
+    tags:
+    - "*"
 
 jobs:
   build:
+    if: github.event.base_ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -25,7 +27,7 @@ jobs:
       run: |
         npm install
         npm run build
-        
+
     - name: Install Composer dependencies
       run: composer install -o --no-progress
 
@@ -38,3 +40,17 @@ jobs:
     - name: PHPUnit
       run: |
         bin/install-wp-tests.sh wordpress_test root root 127.0.0.1:${{ job.services.mysql.ports['3306'] }} latest true
+
+    - name: Wordpress plugin deploy
+      uses: 10up/action-wordpress-plugin-deploy@stable
+      env:
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SLUG: eko-video
+
+    - name: WordPress.org plugin asset/readme update
+      uses: 10up/action-wordpress-plugin-asset-update@stable
+      env:
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SLUG: eko-video
