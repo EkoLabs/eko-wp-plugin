@@ -54,11 +54,6 @@ class Eko_Admin {
 		add_settings_field( 'eko_plugin_setting_env', 'API env', array( $this, 'plugin_setting_env' ), 'eko_plugin', 'eko_settings' );
 		add_settings_field( 'eko_plugin_setting_slug', 'Slug for eko Video post type', array( $this, 'plugin_setting_slug' ), 'eko_plugin', 'eko_settings' );
 
-		// http api settings
-		// add_settings_section( 'eko_settings_api', 'Edit eko api settings', array( $this, 'plugin_api_area' ), 'eko_plugin' );
-		// add_settings_field( 'eko_plugin_setting_api_key', 'API key', array( $this, 'plugin_setting_api_key' ), 'eko_plugin', 'eko_settings_api' );
-		// add_settings_field( 'eko_plugin_setting_app_id', 'App Id', array( $this, 'plugin_setting_app_id' ), 'eko_plugin', 'eko_settings_api' );
-		// add_settings_field( 'eko_plugin_setting_is_verified', 'Verified', array( $this, 'plugin_setting_is_verified' ), 'eko_plugin', 'eko_settings_api' );
 	}
 
 	/**
@@ -142,31 +137,6 @@ class Eko_Admin {
 	function plugin_api_area() {
 		return;
 	}
-	/**
-	 * plugin_setting_api_key
-	 *
-	 * @return void
-	 */
-	// function plugin_setting_api_key() {
-	// 	$options = get_option( 'eko_plugin_options' );
-	// 	echo "<input id='eko_plugin_setting_api_key' name='eko_plugin_options[apiKey]' type='text' value='" . esc_attr( $options['apiKey'] )
-	// 		. "' placeholder='your eko api key' />";
-	// }
-	/**
-	 * plugin_setting_app_id
-	 *
-	 * @return void
-	 */
-	// function plugin_setting_app_id() {
-	// 	$options = get_option( 'eko_plugin_options' );
-	// 	echo "<input id='eko_plugin_setting_app_id' name='eko_plugin_options[appId]' type='text' value='" . esc_attr( $options['appId'] )
-	// 		. "' placeholder='your app Id' />";
-	// }
-	// function plugin_setting_is_verified() {
-	// 	$options = get_option( 'eko_plugin_options' );
-	// 	echo "<input id='eko_plugin_setting_is_verified' name='eko_plugin_options[verified]' readonly type='text' value='" . esc_attr( $options['verified'] ? 'true' : 'false' )
-	// 		. "' />";
-	// }
 
 	function create_default_settings( $option, $name, $value ) {
 		$options = get_option( $option );
