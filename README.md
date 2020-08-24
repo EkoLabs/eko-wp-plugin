@@ -184,3 +184,13 @@ The plugin creates another menu page in the admin dashboard in which you can con
 
 1. API env - the environment from which all of the videos will be played from. It is advised to leave the API env input empty, unless you specifically need to test different environments.
 2. Slug for eko Video post type - by default, the eko-video post type's slug is `eko-videos`. You are given the ability to modify that here.
+
+## contributors
+
+1. Clone the repository.
+2. Run `npm run build:all`.
+3. After every change to the Js/css in the plugin, re-run `npm run build`.
+4. To create a new release and upload it to the svn repository:
+    1. Push all the changes to origin.
+    2. Update the version in the headers of readme.txt.
+    3. Run `npm run release -- --version=<the new version>` (make sure the new version is identical to what listed in reade.txt).
