@@ -41,8 +41,8 @@ class Eko_Frontend {
 				'height'           => '',
 				'password'         => '',
 				'responsive'       => 'true',
-				'query_params'     => '',
-				'full_screen'      => 'false',
+				'queryparams'     => '',
+				'fullscreen'      => 'false',
 				'revision'         => '',
 				'debug'            => false,
 				'autoplay'         => true,
@@ -72,7 +72,7 @@ class Eko_Frontend {
 			$style['width']  = $merged['width'];
 		}
 		// change the position of the iframe if it is not full screen
-		if ( $merged['full_screen'] === 'false' ) {
+		if ( $merged['fullscreen'] === 'false' ) {
 			$style['position'] = 'static';
 		}
 		// send password and configs
@@ -103,8 +103,8 @@ class Eko_Frontend {
 			'extraParams' => $extra_params,
 			'cover'       => $merged['cover'],
 		);
-		if ( $merged['query_params'] ) {
-			$iframe_params['pageParams'] = explode( ',', $merged['query_params'] );
+		if ( $merged['queryparams'] ) {
+			$iframe_params['pageParams'] = explode( ',', $merged['queryparams'] );
 		}
 		// send the information in the window as the video id - to allow duplicates
 		wp_localize_script( 'eko-shortcode-script', $merged['id'], $iframe_params );

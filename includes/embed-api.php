@@ -25,7 +25,7 @@ function eko_embed_video_by_id( string $videoId, array $config = array(), string
 			'height'           => '',
 			'responsive'       => true,
 			'password'         => '',
-			'query_params'     => '',
+			'queryParams'     => '',
 			'env'              => '', // default environment is empty
 			'debug'            => false,
 			'autoplay'         => true,
@@ -79,8 +79,8 @@ function eko_embed_video_by_id( string $videoId, array $config = array(), string
 		'events'      => $events,
 		'cover'       => $merged['cover'],
 	);
-	if ( $merged['query_params'] ) {
-		$iframe_params['pageParams'] = explode( ',', $merged['query_params'] );
+	if ( $merged['queryParams'] ) {
+		$iframe_params['pageParams'] = explode( ',', $merged['queryParams'] );
 	}
 	wp_localize_script( 'eko-shortcode-script', 'iframeParams', $iframe_params );
 	return $o;

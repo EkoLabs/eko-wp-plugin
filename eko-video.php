@@ -11,13 +11,13 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
  * Author:      eko
  * Author URI:  https://eko.com
  * Description: A plugin to assist on embedding eko videos in WordPress sites.
- * Version:     1.0.7
+ * Version:     1.0.8
  * License:     GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 // Plugin definintions
 define( 'EKO_NAME', pathinfo( __FILE__ )['filename'] );
-define( 'EKO_VERSION', '1.0.0' );
+define( 'EKO_VERSION', '1.0.8' );
 define( 'EKO_PLUGIN_URL', plugins_url( '', __FILE__ ) );
 define( 'EKO_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'EKO_DFAULT_CPT_SLUG', 'eko-videos' );

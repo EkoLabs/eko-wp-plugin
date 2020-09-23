@@ -64,7 +64,7 @@ You can use the plugin's built-in shortcode to embed your eko Video in any kind 
 
 **How To Use It?**
 * Basic: [eko-video id=<eko video's Id>], example: [eko-video id=MebL1z]
-* Make it full screen by passing full_screen=true as a parameter
+* Make it full screen by passing fullScreen=true as a parameter
 * Control the iframe's dimentions by passing width and height parameters
 * By default, the embedded video is reponsive. You can override it by passing responsive=false
 * Example: [eko-video id=MebL1z width=800px height=600px responsive=false]
@@ -83,6 +83,11 @@ The template is a suggestion showing you how to utilize the plugin to gain max-c
 4. **Preview** any of your eko-Video posts
 
 == Changelog ==
+
+= 1.0.8 =
+* Updated the plugin's icons
+* removed snake_case from shortcode params and embedding params. noe all of the params are in camelCase
+* this effects: query_params, full_screen
 
 = 1.0.7 =
 * typos in readme...

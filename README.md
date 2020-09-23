@@ -64,7 +64,7 @@ Anywhere in your post, type `[eko-video id=<video id>]`
 |   height    | `String`  | css dimension for the embedded video height, if responsive will set the video's max-height                 |
 |    width    | `String`  | css dimension for the embedded video width, if responsive will set the video's max-width                   |
 |  password   | `String`  | To play password protected videos                                                                          |
-| full_screen | `Boolean` | to embed the video over the entire viewport. will not work if custom dimensions are set. Default: **true** |
+| fullScreen | `Boolean` | to embed the video over the entire viewport. will not work if custom dimensions are set. Default: **true** |
 
 #### Example
 
@@ -77,7 +77,7 @@ Anywhere in your post, type `[eko-video id=<video id>]`
 |      Param       |        Type        | Description                                                                         |
 | :--------------: | :----------------: | :---------------------------------------------------------------------------------- |
 |     autoplay     |     `Boolean`      | Default: **true**                                                                   |
-|   query_params   |      `String`      | Comma separated list of query params to be forwarded to the player from the URL     |
+|   queryParams   |      `String`      | Comma separated list of query params to be forwarded to the player from the URL     |
 |     revision     | `String`, `number` | To play a revision version of the video. Can be a revision number or 'latest'       |
 |      debug       |     `Boolean`      | To present debug information on top of the video. Default: **false**                |
 | clearCheckpoint  |     `Boolean`      | Prevent the player from saving in-video progression. Default: **true**              |
@@ -154,7 +154,7 @@ Embeds an eko video
 |      width       |      `String`      | css dimension for the embedded video width, if responsive will set the video's max-width             |
 |     password     |      `String`      | To play password protected videos                                                                    |
 |     autoplay     |     `Boolean`      | Default: **true**                                                                                    |
-|   query_params   |      `array`       | List of query params to be forwarded to the player from the URL                                      |
+|   queryParams   |      `array`       | List of query params to be forwarded to the player from the URL                                      |
 |       env        |      `String`      | Dev environment to play the video from, Default is empty. **It is not advised to change that field** |
 |     revision     | `String`, `number` | To play a revision version of the video. Can be a revision number or 'latest'                        |
 |      debug       |     `Boolean`      | To present debug information on top of the video. Default: **false**                                 |
